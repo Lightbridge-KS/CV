@@ -16,3 +16,13 @@ library(here)
 ### New line in character vector
 
 \\\\
+
+### Bold
+
+\textbf{<text>}
+
+### Color with Link
+
+[link](https://www.google.com)
+
+[\textcolor{blue}{link}](https://www.google.com) 

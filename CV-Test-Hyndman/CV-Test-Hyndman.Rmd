@@ -10,7 +10,8 @@ twitter: mariecurie
 github: mariecurie
 linkedin: mariecurie
 date: "`r format(Sys.time(), '%B %Y')`"
-output: vitae::hyndman
+output: 
+  vitae::hyndman
 ---
 
 ```{r setup, include=FALSE}
@@ -23,6 +24,12 @@ library(tibble)
 
 # source(here("R/table.R"))
 ```
+
+```{r read_cv, include=FALSE}
+cv <- read_rds(here("data/cv.Rds"))
+```
+
+# Thai Not work yet
 
 
 
@@ -74,6 +81,44 @@ tibble(what = rep("What field", 2),
 ```
 
 # Tricks
+## Bold
+
+\textbf{greatest}
+
+```{r latex_bold}
+latex_bold <- function(text) {
+
+  glue::glue("\\textbf{<text>}",
+             .open = "<", .close = ">")
+}
+
+tibble(
+  color = latex_bold("Bold Text")
+       ) %>%
+  detailed_entries(what = color, .protect = F)
+```
+
+
+## Color
+
+```{r latex_color}
+latex_color <- function(text, color = "red") {
+  
+  glue::glue("\\textcolor{<color>}{<text>}",
+             .open = "<", .close = ">")
+}
+
+latex_color("text")
+```
+
+
+```{r}
+tibble(
+  color = latex_color("TextColor", color = "red")
+       ) %>% 
+  detailed_entries(what = color, .protect = F)
+```
+
 
 ## Link to Webpage
 
@@ -84,20 +129,20 @@ tibble(what = rep("What field", 2),
 \href{http://www.latex-tutorial.com}{\textcolor{blue}{link}}
 
 
-```{r parse_latex_hyperlink}
-parse_latex_hyperlink <- function(text, url, color = "blue") {
+```{r latex_hyperlink}
+latex_hyperlink <- function(text, url, color = "blue") {
   
   glue::glue("\\href{<url>}{\\textcolor{<color>}{<text>}}",
              .open = "<", .close = ">")
   
 }
 
-parse_latex_hyperlink("Link", "http://www.latex-tutorial.com")
+latex_hyperlink("Link", "http://www.latex-tutorial.com")
 ```
 
 ```{r}
 tibble(
-  link = parse_latex_hyperlink("LinkParse", 
+  link = latex_hyperlink("LinkParse", 
                                "http://www.latex-tutorial.com", color = "red")
        ) %>% 
   detailed_entries(what = link, .protect = F)
@@ -132,7 +177,7 @@ tribble(
   ~Year, ~Type, ~Desc,
   1903, "Physics", "Awarded for her work on radioactivity with Pierre Curie and Henri Becquerel",
   1911, "Chemistry", "Awarded for the discovery of radium and polonium"
-) %>% 
+  ) %>% 
   brief_entries(
     glue::glue("Nobel Prize in {Type}"),
     Year, 

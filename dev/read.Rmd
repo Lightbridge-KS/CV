@@ -1,0 +1,59 @@
+---
+title: "Read Data for use in CV"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+here::i_am("dev/read.Rmd")
+library(here)
+library(readr)
+library(googledrive)
+library(googlesheets4)
+```
+
+### Auth
+
+```{r drive_auth, include=FALSE}
+drive_auth(email = "ki11ip0.s.a.s@gmail.com")
+gs4_auth(token = drive_token())
+
+drive_user()
+```
+
+## Read
+
+```{r ss}
+ss_cv_en <- as_sheets_id("https://docs.google.com/spreadsheets/d/1OIei_hGoJLS_gjsYAj2ihmGETa6gw6ZlnbA3gYwTei4/edit#gid=0")
+```
+
+### Read GG sheet
+
+```{r read_cv_ggsheet}
+read_cv_ggsheet <- function(ss = ss_cv_en) {
+  
+  edu <- read_sheet(ss, sheet = "Education")
+  work <- read_sheet(ss, sheet = "Employment")
+  nl <- read_sheet(ss, sheet = "NL")
+  nl2 <- read_sheet(ss, sheet = "NL2")
+  research <- read_sheet(ss, sheet = "Research")
+  acad <- read_sheet(ss, sheet = "Academic")
+  otherTr <- read_sheet(ss, sheet = "Other_train")
+  
+  list(edu = edu, 
+       work = work, 
+       nl = nl, 
+       nl2 = nl2, 
+       research = research,
+       acad = acad,
+       otherTr = otherTr
+       )
+}
+```
+
+```{r cv}
+cv <- read_cv_ggsheet() %>%
+  write_rds(here("data/cv.Rds"))
+
+cv 
+```

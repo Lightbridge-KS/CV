@@ -7,7 +7,8 @@ phone: 085-199-1962
 email: "kittipos.sir@mahidol.edu"
 github: Lightbridge-KS
 date: "`r format(Sys.time(), '%B %Y')`"
-output: vitae::hyndman
+output: 
+  vitae::hyndman
 ---
 
 ```{r setup, include=FALSE}
@@ -18,50 +19,134 @@ library(readr)
 library(vitae)
 library(tibble)
 
-# source(here("R/table.R"))
+source(here("R/latex_helper.R"))
 ```
 
-
-# Some stuff about me
-
- * I poisoned myself doing research.
- * I was the first woman to win a Nobel prize
- * I was the first person and only woman to win a Nobel prize in two different sciences.
-
-# Education
-
-```{r}
-library(tibble)
-tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Informal studies", "1889-91", "Flying University", "Warsaw, Poland",
-  "Master of Physics", "1893", "Sorbonne Université", "Paris, France",
-  "Master of Mathematics", "1894", "Sorbonne Université", "Paris, France"
-) %>% 
-  detailed_entries(Degree, Year, Institution, Where)
+```{r read_cv, include=FALSE}
+cv <- read_rds(here("data/cv.Rds"))
 ```
 
-# Nobel Prizes
+# Employments
 
-```{r}
-tribble(
-  ~Year, ~Type, ~Desc,
-  1903, "Physics", "Awarded for her work on radioactivity with Pierre Curie and Henri Becquerel",
-  1911, "Chemistry", "Awarded for the discovery of radium and polonium"
-) %>% 
-  brief_entries(
-    glue::glue("Nobel Prize in {Type}"),
-    Year, 
-    Desc
+```{r work}
+cv$work %>% 
+  detailed_entries(
+    what = Title,
+    with = Unit,
+    when = glue::glue("{Start_yr} - {End_yr}")
   )
 ```
 
-# Publications
+# Educations
+
+```{r edu}
+cv$edu %>% 
+  detailed_entries(what = Degree,
+                   when = glue::glue("{Start_yr} - {End_yr}"),
+                   with = Institution,
+                   )
+```
+
+# Medical Competency Assessment
+
+```{r nl2}
+cv$nl2 %>% 
+  detailed_entries(
+    what = Step,
+    when = Yr,
+    why = Text
+  )
+```
+
+# Academic Trainings
+
+```{r eval=FALSE}
+cv$acad %>% 
+  mutate(link = latex_hyperlink("Link", Certificate),
+         link = paste0("--- Certificate: ", link))
+```
+
+```{r acad}
+cv$acad[1:3, ] %>% 
+  mutate(link = latex_hyperlink("Link", Certificate, color = "purple"),
+         prefix_link = latex_color("--- Certificate: ", color = "gray"),
+         full_link = paste0(prefix_link, link)
+         ) %>% 
+  detailed_entries(
+    what = Title,
+    with = By,
+    where = full_link,
+    when = Yr,
+    .protect = F
+  )
+```
 
 ```{r}
-library(dplyr)
-knitr::write_bib(c("vitae", "tibble"), "packages.bib")
-
-bibliography_entries("packages.bib") %>%
-  arrange(desc(author$family), issued)
+cv$acad[4, ] %>% 
+  detailed_entries(
+    what = Title,
+    with = By,
+    when = Yr,
+    .protect = T
+  )
 ```
+
+# Other Conferences & Trainings
+
+```{r}
+cv$otherTr %>% 
+  mutate(link = latex_hyperlink("Link", Certificate, color = "purple"),
+         prefix_link = latex_color("--- Certificate: ", color = "gray"),
+         full_link = paste0(prefix_link, link)
+         ) %>% 
+  detailed_entries(
+    what = Title,
+    with = By,
+    where = full_link,
+    when = Yr,
+    .protect = F
+    )
+```
+
+# Research Experience
+
+```{r}
+cv$research %>% 
+  detailed_entries(
+    what = Title,
+    with = glue::glue("With: {With}"),
+    when = Status
+  )
+```
+
+# Projects --- Web applications
+
+### E-learning systems
+
+-   [\textcolor{purple}{\textbf{SELECx MCQ Analysis}}](https://si-physio-intern.shinyapps.io/SELECx_mcq_analysis/)
+
+    -   This web application performs MCQ item analysis of student's quiz report from [SELECx](http://selecx.si.mahidol.ac.th).
+
+-   [\textcolor{purple}{\textbf{SELECx Combine Quiz}}](https://si-physio-intern.shinyapps.io/SELECx_combine_quiz/)
+
+    -   This web application combines score and checks student's submission from [SELECx](http://selecx.si.mahidol.ac.th).
+
+### Physiology Educations
+
+-   [\textcolor{purple}{\textbf{BTPS calculator}}](https://btps-calc.herokuapp.com)
+
+    -   This web application converts lung volumn from [ATPS](https://medical-dictionary.thefreedictionary.com/ambient+temperature+and+pressure%2C+saturated) to [BTPS](https://medical-dictionary.thefreedictionary.com/body+temperature+and+pressure%2c+saturated).
+
+-   [\textcolor{purple}{\textbf{Metabolic rate and Oxygen consumption calculator}}](https://metabolic-rate-calc.herokuapp.com)
+
+    -   This web application predicts metabolic rate and oxygen consumption from Harvard's spirometer tracing as used in exercise studies laboratory class.
+
+### Research
+
+-   [\textcolor{purple}{\textbf{Combine HRV and BRS Report file}}](https://sips-ans.shinyapps.io/read_HRV_report)
+
+    -   This web application combines LabChart's HRV Report files from `.txt` to single Excel table for further data analysis.
+    
+# Elective Activities
+
+
