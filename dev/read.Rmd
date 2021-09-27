@@ -27,7 +27,7 @@ drive_user()
 ss_cv_en <- as_sheets_id("https://docs.google.com/spreadsheets/d/1OIei_hGoJLS_gjsYAj2ihmGETa6gw6ZlnbA3gYwTei4/edit#gid=0")
 ```
 
-### Read Individual Sheet
+### Opt 1: Read Individual Sheet
 
 ```{r read_individual}
 edu <- read_sheet(ss_cv_en, sheet = "Education")
@@ -48,12 +48,14 @@ cv  <- list(edu = edu,
        otherTr = otherTr,
        elective = elective
        ) %>% 
-  write_rds(here("data/cv.Rds"))
-
-cv
+  write_rds(here("data/cv_raw.Rds")) %>% 
+  # backup for others to see 
+  lbr::write_custom_xlsx(here("data/cv_raw.xlsx"), overwrite = TRUE)
+                   
+cv  
 ```
 
-### Read All GG sheets
+### Opt 2: Read All GG sheets
 
 ```{r read_cv_ggsheet}
 read_cv_ggsheet <- function(ss = ss_cv_en) {
@@ -81,7 +83,9 @@ read_cv_ggsheet <- function(ss = ss_cv_en) {
 
 ```{r cv}
 cv <- read_cv_ggsheet() %>%
-  write_rds(here("data/cv.Rds"))
+  write_rds(here("data/cv_raw.Rds")) %>% 
+  # backup for others to see 
+  lbr::write_custom_xlsx(here("data/cv_raw.xlsx"), overwrite = TRUE)
 
 cv 
 ```

@@ -228,23 +228,114 @@ pre code {
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<div id="read-individual-sheet" class="section level3">
-<h3>Read Individual Sheet</h3>
+<div id="opt-1-read-individual-sheet" class="section level3">
+<h3>Opt 1: Read Individual Sheet</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiJGVkdVxuIn0= -->
+<pre><code>$edu</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6Niwic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIzIMOXIDYiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBNTFUVFc4VE1SQjEwbXhLZ2xvK0pjVE5SeEJOTGx3NFJtVmJnVVFsMUNTaUI2UnF1bmF6VnJ5ZWxlMXR5YTNIL292K1VscG1OelpKVitLQ0phL0g3M2xtM25pOHArblp4K0haa0RHMnczb2QraVprc21RK094NTlZcXpYcFUySDlkaWdYbjhSL1lxTVBzM25hNCtHZUpsaTV0Rnl2T1FuVXFoTUdSbVl0L095bEhZMGxSa2FBWGJGajBTVmdWZG80b0Z2ZVAyUEE0OXpUR2E1NU1lUVZkcXZ0aFB4VXlqQTUrb0NoZUpmMEpYS2d6N2dKNUFyZ1pyUGpicVMxaW0vQ25IZXpLeUNnczhGRm54YUxSM3dhWllqNmtCLytHN0JnVFdGOGp5VkJScm5iU01uSE9Qdi9rcDkzMUw0NGhETVlvbkxBejdMUVdrdzRqOEl4dmJya0pNN1g3ZUJUZTd5c1A1a1lRVCtOdUJsV0VYa3R5VzlYb3NkZmRiZ0hOMk93Y282d2djUE5EYnJveTRuQmdycFFxQitBUHVwWEZnWnUvcjBLMTJMOHRWV0g1TWZ1YlNSZnpMMVlQMzV5a2J2SXlNMnU5MVVlcXJXdGZJT0xGNlBZKzQ5bXQwYitwQyszMjJCV1YxTkVCakJvUUFQNDB0TC9yUzdiN25zWWxsckphZHUvWDZUbG5QSHRvQm5Wb0k0VjBhb0t5VXEwSFdDaGw2UHZXRHZiTm45ZGNydVF3aVZ4TnFsV1d6K2gwVERoWXh2Ylo4cWJnb2VsMVlaSHlzaDFJMDkwak9PU0lZNklrMXQ3UDRQREtHeHE3WURBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Degree"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Institution"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Where"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Start_yr"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["End_yr"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Details"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"Doctor of Medicine","2":"The Faculty of Medicine Ramathibodi Hospital, Mahidol University","3":"Bangkok, Thailand","4":"2013","5":"2018","6":"Second-Class Honours"},{"1":"Upper-Secondary Education","2":"Triam Udom Suksa School","3":"Bangkok, Thailand","4":"2010","5":"2012","6":"NA"},{"1":"Lower-Secondary Education","2":"Prasarnmit Demonstration School (Secondary)","3":"Bangkok, Thailand","4":"2007","5":"2009","6":"NA"}],"options":{"columns":{"min":{},"max":[10],"total":[6]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4kd29ya1xuIn0= -->
+<pre><code>
+$work</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MiwibmNvbCI6NSwic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIyIMOXIDUiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBMTFSelU3RE1Bd09wV1dzMGdZU1NGenpBREFodUhEY1lmd0pnY2FmeEEyWk50dU1RaklsNGFjM0hvQURiOENicnJoZE1rWWpKZkgzV2JZLzJ6ZURoOFAwSVdXTXJiSjRoZDZFVEpiYzM1M3NIVEVXUndSV1dNemExZjlCN3EzS1MzZVRidVFkN1hQbGhGRm9uU2UyVDRVU0JpUWZHc2djT3RRRUcwSFhBekVGNDE2RWNseVArSEJTV05SU2p3dCtBdG1yZEVYRlhvb2NNMVNDMzZKQkE4LzhUTnNwT3BDNy9CSW1tR3ZKN3hXK0NXUFJGVDd4em5CaWdGK0JHdk1MQ1hvUlFxNXVWYi8vODEyMXlQby9YOHlmWlYydG9SR1dSSGtZSCt3ZjdOTmZUU2o2cE9lemp2ZzNtRVRCaTdBK1R4TElPM1JTaEN5a01tUmN2M1hVOTJOaFBGNDdWdmtmYWcyRUE1UzJVYUp0OUhzdmxPa0VMV1ZaenBwYU1nazJhQWxrbW9PRDNzaFFQS0ZtU0V0UHF3MVJVTFM4M2NYYVRZUFlNQUx5UjFRNXZtSCtXZzgycmQzejAvRjJ0R1FuODVKUjJSalNtbEJqV20vUUx1RkpTQSs2MUhIZGNHOXFjTEdPbEZqYmM3cmFwMmN5TFFOVDk4Wm12NjJxSEZuVUFnQUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Title"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Unit"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Start_yr"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["End_yr"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Details"],"name":[5],"type":["lgl"],"align":["right"]}],"data":[{"1":"Internist","2":"Department of Physiology Faculty of Medicine Siriraj Hospital, Mahidol University","3":"2020","4":"Present","5":"NA"},{"1":"General Practitioner","2":"Phra Nang Klao Hospital","3":"2019","4":"2020","5":"NA"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4kbmxcbiJ9 -->
+<pre><code>
+$nl</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6NCwic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIzIMOXIDQiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBMTFReTA3RE1CQjBVaHZVU0MxSS9BRHFIVXNrQk5wYkQ0aHpSVUVxSjJRU2d5d1pPM0xNNDhpUkEvL1FMNlZsbmRpbzlVcUpkM1ozWmoyK3ZWNFYyU3BEQ0EwUVR1QlBJRVhrL3U3bWJJb1FUZ0VrQ0tPaE96K2hmUUlKaHUrNFozU05nNlhsemVuNUhzcjNVQUhaMkRIbTZ5K25qK2JyYjMvK0lCKzdpdVNxcEhrWndHVkppeUxvVFJhc2JTZngvQ3lueGV5ZlBLVVhidU53Q3hHWklJcTk4dGJUc1M5aWQwbWZwdzhtakM0cmJiZ0gyWUtiaWlzckpJOFVoMFovMEtBNmNnck9JbXoralZkWEVxN3VWNGRpVmpQTDZMTUJQcUJOUkRuVWpSVmFBU2wxRDA4aWNtS2l3cEhockg0VXFoYnZvbjVqMGkzbzJuMk1mRDdZeVhHL010MTZLUkllbXFzWG9ZSjlJdGtUbHg2TXdYRm5tRFpHS0J1Y1FMV2xWbHNXNXJKS3kxRHB2S0hOSDVIeEIzOXZBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Step"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Yr"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Score"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Percentile"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Step 1","2":"2016","3":"75.25","4":"92.39"},{"1":"Step 2","2":"2018","3":"65.33","4":"78.43"},{"1":"Step 3","2":"2019","3":"\"Pass\"","4":"NA"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4kbmwyXG4ifQ== -->
+<pre><code>
+$nl2</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6NSwic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyI1IMOXIDUiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBMzFTUFUvRE1CQzlocVNvRVNrZy9rRFZIVXMwaExaTURJaTVva1VxRXpLSlFaYUNVemtHT2pJeThCLzRvVWlGYzJyVHhLcHFLYmw3OS9IdVhaemI2M2tjemtNQTJBTy9oZThBWFFqdVpqZW5Jd0RmUTlBQ0h6cmFMakY5b3JQNEhGVjJuV2hQRlZ2MHpuYWd3UTRVbzlmVmJGZmZIM28yYk95blk3L0FuUHIwWUppUVFiSVZYQ1FranJlQmRuOUN5N0x2TW8wSEpCNXZCY01ST1krYkFLRHppOGZoT0ppbWhXU1h2YnFPNHdtVEtST0s1NWlvMDlyaXVyUkdjWDFzWklxdDlNYmRCSUsrc05MUjR1dnZhM3p2WHRyU2lzZUFjRFBOTnMzWVVqbnNIVm04RXpzaDBtejZobkQ1SDFkR21xTTRJOE1HdzR3cVNwNGs5aU5hT1MzN3hVTHhRbUNUVi8rMy9uODY2UVFPSmFQWkF4Y1pmK1BaSzgzMWdDcTlQcEh4ZzZhdlIzcnVYYldaZU9iQ0xoN2s5SkhsQm5SeDQycGhzcEJjS0xzSlJrdWlDa1Z0WFpnV3VZMVV1OEhxRC9QZXlxcFNBd0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Step"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Yr"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Score"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Percentile"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Text"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"Step 1","2":"2016","3":"75.25","4":"92.39","5":"Score: 75.25"},{"1":"Step 1","2":"2016","3":"75.25","4":"92.39","5":"Percentile: 92.39"},{"1":"Step 2","2":"2018","3":"65.33","4":"78.43","5":"Score: 65.33"},{"1":"Step 2","2":"2018","3":"65.33","4":"78.43","5":"Percentile: 78.43"},{"1":"Step 3","2":"2019","3":"\"Pass\"","4":"NA","5":"Score: \"Pass\""}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4kcmVzZWFyY2hcbiJ9 -->
+<pre><code>
+$research</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MSwibmNvbCI6NSwic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxIMOXIDUiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBMTFTelU0Q01SQXV5SUtRZ0NTK1FNOEc5K0xGb3lnU0wwWUNLTnpJc0Z1Z3NiYllEZ0kzSHNFSDBQaHVQZ2c0dSt3YTJFbmErZmxtZG1hK2JyYzF2S29NSzR5eEUxYkkwZTJSeWJ6bmZ2dnltckZDbnB3Y0s3QnlwRmNFbjBjb25Yb01zRTBFdlA5dXZ0b1FvTEdPTjUwemdRUVVJVjlLblBHN0dlaXBjRnhxL2lEQUl1OFN4bC9BU2hoTEpYSE5RWWY4RnF5eFlxTEVpdmVFZGhMbFJ3UzFqVkptS2ZXVU40TUZsZlhRbWxmeHUvbitIMkEvV2YxSlQwMmNwa0d0blhRWi9DS2V5dWNkYXlZK2IxbWZEd0FSTkVTYTFCd2EvTEhWNEoxWmk3SnJVZVhOenlkTDVQQkxwWTRWVG1qTVVPTnBlQk5wVnk4TjlpVXFrVGpGSGdJdVhPSVZCc1JOWXA4U1luRzB0bW5tdlE0ajc3aEQyWnFsbjNhcDBzbHY2TnFSWkVjSkZMZ3NBWldROXZRbmx1ckoyMlpLU21hTzBtZ3F5aDgvYi9MdU5oTTRzd0xDa2RRaHZWSzRBQlUxMlA4T3NWUVRPM2RnZS91VytWMkdvNkxRVTZsVGtqd0ZZNkVTcDBZYnh3djdjeXVKOFdRVGlqb2ZEVUthVndtTVNpUHhibXo3QnhUbTRFN1ZBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Title"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Status"],"name":[2],"type":["chr"],"align":["left"]},{"label":["With"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Start_yr"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["End_yr"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"“Factors Associated with Changes in Heart Rate Variability and Baroreflex Sensitivity Following Acute Stroke”","2":"Ongoing Analysis","3":"Assoc. Prof. Dr. Wattana Watanapa, MD, PhD","4":"2020","5":"Present"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4kYWNhZFxuIn0= -->
+<pre><code>
+$acad</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6NCwic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyI0IMOXIDQiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBNDJUelcvVE1CVEEzZEtDV3JUeEtjNld1TUNCdEUzaXRHVVhSc2VIRUFnME5xbWMwSXZ0cEJhdVhkbHV0OTc0RXpodzV4OUZHMDZXYUN6amdLWDRQYitQMzN0T1hnNFA1bEYvM2tjSTNVQ2RsdCs3WGtYZDQ2UFh6eVlJZGRyKzBFSWQxQ3ZrcVhjLzhFckhQN3VGZlBIclp4R05yc3NmcUZwM3kvZ0xBRDRBQjNoZmdkeGFZZkdKY0F0OGlEOFpuUnRZTG9YS3E3aEgrMndEaW5MMlQrL0R6dzZjc0U1UWtQZzlCNk11ZlhzekxpVUd4ZkJTUzA3WEVneE9oWlk2MzJLcTE4WnluR21EVjlvNlQyVnJjQnhidDJaY09kdG85dDRiclhQSjhaTlptV2ZnYWVWNC9FNHZsTVZ2OWVxYjhQSllpUTAzVnJqdDlkQ2lWZVVMc285S0N1VlpuTTFyMy8wUHNCQk15NzhBalE3MkZzNnQ3UFBCZ0ZiWVFKdDhZQmRnK0dBYVRrYmpPQ1VRSmxIR1J6Rm5OS1ZKbEU0WlNSSTJDdjhEQVdISWh6U2VVRG9OQ1NFUmkwZ1dUVk5HMkNnRlJ0SUs4ZW9xd2dhY25aWVV5bzBUbWY4S2p0c0JJZkU0SFFLTEppR1BvM0dZa3RFNHltSVdUMEtXRElGNFVPL2NyOFpJZFJVc2VmUE50NytZMm4wa25PUzErZVcyMG03UExrczNnRDJqVDRJYXVsTmtmZmViTC95N1dabEtzSFhsMnRobmZrQ0R6TStiNTZLelJzb3R2WEpDSzUvVUx2NkNiaU81WlJxR080WUQreW9VRXh2aFIwMFdCVXIzeGRxcDlNNVZ2U2paUHE5UTNRcDFrNnZjRDFEZHU0U1V5K3F3NjI5Y1hqaFlHYUZjZlJOdnRZSFREdXE0UHRXeXRwUjNRMmQvQVBhM0orRDhBd0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Yr"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Title"],"name":[2],"type":["chr"],"align":["left"]},{"label":["By"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Certificate"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"2021","2":"Data Analysis with R Programming","3":"Google (Coursera)","4":"https://coursera.org/share/928174b5a263fe14edcbc63b9d566d12"},{"1":"2021","2":"Advanced R Programming","3":"Johns Hopkins University (Coursera)","4":"https://coursera.org/share/a22e0c48cc925553d35f39bd5d1bad5b"},{"1":"2021","2":"Statistical Learning","3":"StanfordOnline (edX)","4":"https://courses.edx.org/certificates/5547b0ad382e4372b5173f4d482d60a5"},{"1":"2020","2":"Cell and molecular biology course for postgraduate students","3":"Mahidol University","4":"NA"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4kb3RoZXJUclxuIn0= -->
+<pre><code>
+$otherTr</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MiwibmNvbCI6Niwic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIyIMOXIDYiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBNlZUejIvVE1CUjJzNmJUaWphUU9DUGx3TFdKbGdvMmtCQ2pQN1pPQTZuYjJxMmNLcE84SkM2dUhkbHUwM0xpVCtEQWZmL3BpcFBGWWcyWFNWaXk4L2w3NzMzdmg1eXIzcVRkbkRRUlFqdW9YdE9uclNHeXg2UFQxakZDZFV0ZmFxaU85dkx2U3B0ZmF0RFErMEJ2NitUdWQrNk5UdTUrb1hLOXlQa3lZTmlESlZDZXpvRXBoMGZPbCs2bE13S3BwQk54NGZURFJZQVY0UXhUNTVPVUlLWHhHd0NtS25HNldJQXpGRHpTcHNKTmxycXZINVBPa0djZ2hwem8yS0VBcVRVSzFVb3Q5ZXRCdjcrRnQrMVhpVktwZk85NW9TQkxjR1BPWXdwdXdPZGVSQ2g0b1hmWXZramJJaHZNc200OGZuT3o4aU4vZ2k5NnAycy91enc4V2tYbjNwSkE5bkVoMHc4eXdZS3crTW5LWjFNMi9reURoUDJZM2ZwdjN4M0pzK05XNjN5QllkVzlpZmh0NjEvbDdkcjlheUtJd0RNek9Ca1FZQUg4bmJEVFh3VkFhVUVHZWtBZy9pTnlPL2NyMDUxTUFGeEozRGxPU01pcGl3TlhKVTl6Mm41bU5zTnprR1dhUmtsYVgwM0o5b2dvQ29idXJFdjByQXRDa1lqb3NvMXhwN1AyUzdqYldVOHBZZDhycWZZRXoxeVRiai9YKzZtUHpXWnpYNjBwb0ZpYW1nelpETEhDYmlSMHZMNVZRM1o1bWc5UUIxbjVQMk5YZ211aVFqd1hnTU1wWVNGWmtuQ0JhWjZnTUQrcy9SSmJqM0RqSWFXMUthWHNVcW9CTENiTWpNR20rQnZROG5LZ095NGFkbFA5a0pUcFJMUFNWVnhoNDljTU9EVk0wUnU2L3dNQVFXUXRLZ1FBQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Yr"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Title"],"name":[2],"type":["chr"],"align":["left"]},{"label":["By"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Certificate"],"name":[4],"type":["chr"],"align":["left"]},{"label":["By2"],"name":[5],"type":["chr"],"align":["left"]},{"label":["By_link"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"2021","2":"Development of MCQ Tests for Educational Assessment of Health Care Professionals","3":"SHEE","4":"https://drive.google.com/file/d/13Kp3rwHjwCgU5Vx2f2XaKDFy2wQ17xfI/view?usp=sharing","5":"Siriraj Health science Education Excellence center","6":"https://shee.si.mahidol.ac.th"},{"1":"2020","2":"Professional PowerPoint Presentation","3":"SHEE","4":"https://drive.google.com/file/d/1G_nULlchnzjW2697sG8--IuaexCVfoW-/view?usp=sharing","5":"Siriraj Health science Education Excellence center","6":"https://shee.si.mahidol.ac.th"}],"options":{"columns":{"min":{},"max":[10],"total":[6]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4kZWxlY3RpdmVcbiJ9 -->
+<pre><code>
+$elective</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MiwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIyIMOXIDMiXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBNjFSd1U0Q01SQXRDNnVCQkRUeEIzcnhwcHNZTHg0OGtJaEVEeVNHUU1TVEdiYUZuYVMwcEZ2UVRUejRKL3dwYTd1MFVmWnNrN1l6YithOTZVekhnOWx0WjlZaGhEUkpxMkhQMkpva25rNkcxM2VFdENMck5FaUx0TjM5YWNNWFZTWWhQYnVqL3U3YlpaUCs3b3Y0ZGU1d1Q3aDVGRHcxdU9VNUJVTWZRRE5VUWkwTE9wVm9xRnJRWjJtNGxpRG9pRE5NVVhKUHZEd2lEdmdhdEZseFdYRmU4aUxORUl3dWF0WHVoNUJ1aENsY1V0Q2pZMWlCeVhDdUdOSW5sYS9SZ0xpaUk4aVFLZUhlc2VVNlIxUDhpOGJ4dUdJSks1NzdSelk5R0wzcEVKNmdFYUhoK0RYam10Y0UybHA5SkVHazY4aHUybVZaN3V1VlVnRjVxQlRBRGdNRHlVSmJ2dlhxbEZPMU5xaWtKVVh1UitNYXVhRnJ3Sm5td041Uk10d2kyNEJ3QmFyd1lYVzlIZjJ4bTRlU1VlbWxZaTkxd3VYeTk2dGpBWE11dk5PekhWY05KMnVOMG9ST0xKb25SdG14QnlSVklpQlZiMlQvQSszc1ZmcklBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Yr"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Title"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Where"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"2016","2":"Electives at Cardiology Unit of Internal Medicine","3":"Faculty of Medicine Ramathibodi Hospital, Mahidol University"},{"1":"2015","2":"Electives at Department of Psychiatry","3":"Faculty of Medicine Ramathibodi Hospital, Mahidol University"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTkFcbiJ9 -->
+<pre><code>NA</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="read-all-gg-sheets" class="section level3">
-<h3>Read All GG sheets</h3>
+<div id="opt-2-read-all-gg-sheets" class="section level3">
+<h3>Opt 2: Read All GG sheets</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-output-begin eyJkYXRhIjoi4pyTIFJlYWRpbmcgZnJvbSBcIkNWLXRhYmxlLWZvci1WaXRhZSAoRU4pXCIuXG7inJMgUmFuZ2UgJydFZHVjYXRpb24nJy5cbuKckyBSZWFkaW5nIGZyb20gXCJDVi10YWJsZS1mb3ItVml0YWUgKEVOKVwiLlxu4pyTIFJhbmdlICcnRW1wbG95bWVudCcnLlxu4pyTIFJlYWRpbmcgZnJvbSBcIkNWLXRhYmxlLWZvci1WaXRhZSAoRU4pXCIuXG7inJMgUmFuZ2UgJydOTCcnLlxu4pyTIFJlYWRpbmcgZnJvbSBcIkNWLXRhYmxlLWZvci1WaXRhZSAoRU4pXCIuXG7inJMgUmFuZ2UgJydOTDInJy5cbuKckyBSZWFkaW5nIGZyb20gXCJDVi10YWJsZS1mb3ItVml0YWUgKEVOKVwiLlxu4pyTIFJhbmdlICcnUmVzZWFyY2gnJy5cbuKckyBSZWFkaW5nIGZyb20gXCJDVi10YWJsZS1mb3ItVml0YWUgKEVOKVwiLlxu4pyTIFJhbmdlICcnQWNhZGVtaWMnJy5cbuKckyBSZWFkaW5nIGZyb20gXCJDVi10YWJsZS1mb3ItVml0YWUgKEVOKVwiLlxu4pyTIFJhbmdlICcnT3RoZXJfdHJhaW4nJy5cbuKckyBSZWFkaW5nIGZyb20gXCJDVi10YWJsZS1mb3ItVml0YWUgKEVOKVwiLlxu4pyTIFJhbmdlICcnRWxlY3RpdmUnJy5cbiJ9 -->
-<pre><code>✓ Reading from &quot;CV-table-for-Vitae (EN)&quot;.
+<!-- rnb-output-begin eyJkYXRhIjoiQXV0by1yZWZyZXNoaW5nIHN0YWxlIE9BdXRoIHRva2VuLlxu4pyTIFJlYWRpbmcgZnJvbSBcIkNWLXRhYmxlLWZvci1WaXRhZSAoRU4pXCIuXG7inJMgUmFuZ2UgJydFZHVjYXRpb24nJy5cbuKckyBSZWFkaW5nIGZyb20gXCJDVi10YWJsZS1mb3ItVml0YWUgKEVOKVwiLlxu4pyTIFJhbmdlICcnRW1wbG95bWVudCcnLlxu4pyTIFJlYWRpbmcgZnJvbSBcIkNWLXRhYmxlLWZvci1WaXRhZSAoRU4pXCIuXG7inJMgUmFuZ2UgJydOTCcnLlxu4pyTIFJlYWRpbmcgZnJvbSBcIkNWLXRhYmxlLWZvci1WaXRhZSAoRU4pXCIuXG7inJMgUmFuZ2UgJydOTDInJy5cbuKckyBSZWFkaW5nIGZyb20gXCJDVi10YWJsZS1mb3ItVml0YWUgKEVOKVwiLlxu4pyTIFJhbmdlICcnUmVzZWFyY2gnJy5cbuKckyBSZWFkaW5nIGZyb20gXCJDVi10YWJsZS1mb3ItVml0YWUgKEVOKVwiLlxu4pyTIFJhbmdlICcnQWNhZGVtaWMnJy5cbuKckyBSZWFkaW5nIGZyb20gXCJDVi10YWJsZS1mb3ItVml0YWUgKEVOKVwiLlxu4pyTIFJhbmdlICcnT3RoZXJfdHJhaW4nJy5cbuKckyBSZWFkaW5nIGZyb20gXCJDVi10YWJsZS1mb3ItVml0YWUgKEVOKVwiLlxu4pyTIFJhbmdlICcnRWxlY3RpdmUnJy5cbiJ9 -->
+<pre><code>Auto-refreshing stale OAuth token.
+✓ Reading from &quot;CV-table-for-Vitae (EN)&quot;.
 ✓ Range &#39;&#39;Education&#39;&#39;.
 ✓ Reading from &quot;CV-table-for-Vitae (EN)&quot;.
 ✓ Range &#39;&#39;Employment&#39;&#39;.
@@ -371,7 +462,7 @@ $elective</code></pre>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVhZCBEYXRhIGZvciB1c2UgaW4gQ1YiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19rbml0JHNldChyb290LmRpciA9IHJwcm9qcm9vdDo6ZmluZF9yc3R1ZGlvX3Jvb3RfZmlsZSgpKSAjIFNldCBXRCB0byBSb290CmhlcmU6OmlfYW0oImRldi9yZWFkLlJtZCIpCmxpYnJhcnkoaGVyZSkKbGlicmFyeShyZWFkcikKbGlicmFyeShnb29nbGVkcml2ZSkKbGlicmFyeShnb29nbGVzaGVldHM0KQpgYGAKCiMjIyBBdXRoCgpgYGB7ciBkcml2ZV9hdXRoLCBpbmNsdWRlPUZBTFNFfQpkcml2ZV9hdXRoKGVtYWlsID0gImtpMTFpcDAucy5hLnNAZ21haWwuY29tIikKZ3M0X2F1dGgodG9rZW4gPSBkcml2ZV90b2tlbigpKQoKZHJpdmVfdXNlcigpCmBgYAoKIyMgUmVhZAoKYGBge3Igc3N9CnNzX2N2X2VuIDwtIGFzX3NoZWV0c19pZCgiaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vc3ByZWFkc2hlZXRzL2QvMU9JZWlfaEdvSkxTX2dqc1lBajJpaG1HRVRhNmd3NlpsbmJBM2dZd1RlaTQvZWRpdCNnaWQ9MCIpCmBgYAoKIyMjIFJlYWQgSW5kaXZpZHVhbCBTaGVldAoKYGBge3IgcmVhZF9pbmRpdmlkdWFsfQplZHUgPC0gcmVhZF9zaGVldChzc19jdl9lbiwgc2hlZXQgPSAiRWR1Y2F0aW9uIikKd29yayA8LSByZWFkX3NoZWV0KHNzX2N2X2VuLCBzaGVldCA9ICJFbXBsb3ltZW50IikKbmwgPC0gcmVhZF9zaGVldChzc19jdl9lbiwgc2hlZXQgPSAiTkwiKQpubDIgPC0gcmVhZF9zaGVldChzc19jdl9lbiwgc2hlZXQgPSAiTkwyIikKcmVzZWFyY2ggPC0gcmVhZF9zaGVldChzc19jdl9lbiwgc2hlZXQgPSAiUmVzZWFyY2giKQphY2FkIDwtIHJlYWRfc2hlZXQoc3NfY3ZfZW4sIHNoZWV0ID0gIkFjYWRlbWljIikKb3RoZXJUciA8LSByZWFkX3NoZWV0KHNzX2N2X2VuLCBzaGVldCA9ICJPdGhlcl90cmFpbiIpCmVsZWN0aXZlIDwtIHJlYWRfc2hlZXQoc3NfY3ZfZW4sIHNoZWV0ID0gIkVsZWN0aXZlIikKICAKY3YgIDwtIGxpc3QoZWR1ID0gZWR1LCAKICAgICAgIHdvcmsgPSB3b3JrLCAKICAgICAgIG5sID0gbmwsIAogICAgICAgbmwyID0gbmwyLCAKICAgICAgIHJlc2VhcmNoID0gcmVzZWFyY2gsCiAgICAgICBhY2FkID0gYWNhZCwKICAgICAgIG90aGVyVHIgPSBvdGhlclRyLAogICAgICAgZWxlY3RpdmUgPSBlbGVjdGl2ZQogICAgICAgKSAlPiUgCiAgd3JpdGVfcmRzKGhlcmUoImRhdGEvY3YuUmRzIikpCgpjdgpgYGAKCiMjIyBSZWFkIEFsbCBHRyBzaGVldHMKCmBgYHtyIHJlYWRfY3ZfZ2dzaGVldH0KcmVhZF9jdl9nZ3NoZWV0IDwtIGZ1bmN0aW9uKHNzID0gc3NfY3ZfZW4pIHsKICAKICBlZHUgPC0gcmVhZF9zaGVldChzcywgc2hlZXQgPSAiRWR1Y2F0aW9uIikKICB3b3JrIDwtIHJlYWRfc2hlZXQoc3MsIHNoZWV0ID0gIkVtcGxveW1lbnQiKQogIG5sIDwtIHJlYWRfc2hlZXQoc3MsIHNoZWV0ID0gIk5MIikKICBubDIgPC0gcmVhZF9zaGVldChzcywgc2hlZXQgPSAiTkwyIikKICByZXNlYXJjaCA8LSByZWFkX3NoZWV0KHNzLCBzaGVldCA9ICJSZXNlYXJjaCIpCiAgYWNhZCA8LSByZWFkX3NoZWV0KHNzLCBzaGVldCA9ICJBY2FkZW1pYyIpCiAgb3RoZXJUciA8LSByZWFkX3NoZWV0KHNzLCBzaGVldCA9ICJPdGhlcl90cmFpbiIpCiAgZWxlY3RpdmUgPC0gcmVhZF9zaGVldChzcywgc2hlZXQgPSAiRWxlY3RpdmUiKQogIAogIGxpc3QoZWR1ID0gZWR1LCAKICAgICAgIHdvcmsgPSB3b3JrLCAKICAgICAgIG5sID0gbmwsIAogICAgICAgbmwyID0gbmwyLCAKICAgICAgIHJlc2VhcmNoID0gcmVzZWFyY2gsCiAgICAgICBhY2FkID0gYWNhZCwKICAgICAgIG90aGVyVHIgPSBvdGhlclRyLAogICAgICAgZWxlY3RpdmUgPSBlbGVjdGl2ZQogICAgICAgKQp9CmBgYAoKYGBge3IgY3Z9CmN2IDwtIHJlYWRfY3ZfZ2dzaGVldCgpICU+JQogIHdyaXRlX3JkcyhoZXJlKCJkYXRhL2N2LlJkcyIpKQoKY3YgCmBgYAoKCiMjIENvbnZlcnQgWWVhciAo4Lie4LioIC0+IOC4hOC4qCkKCmBgYHtyIEJFX3RvX0FEfQpCRV90b19BRCA8LSBmdW5jdGlvbihiZSkgYmUgLSA1NDMKYGBgCgpgYGB7cn0KQkVfdG9fQUQoYygyNTU5LCAyNTU4KSkKYGBgCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVhZCBEYXRhIGZvciB1c2UgaW4gQ1YiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19rbml0JHNldChyb290LmRpciA9IHJwcm9qcm9vdDo6ZmluZF9yc3R1ZGlvX3Jvb3RfZmlsZSgpKSAjIFNldCBXRCB0byBSb290CmhlcmU6OmlfYW0oImRldi9yZWFkLlJtZCIpCmxpYnJhcnkoaGVyZSkKbGlicmFyeShyZWFkcikKbGlicmFyeShnb29nbGVkcml2ZSkKbGlicmFyeShnb29nbGVzaGVldHM0KQpgYGAKCiMjIyBBdXRoCgpgYGB7ciBkcml2ZV9hdXRoLCBpbmNsdWRlPUZBTFNFfQpkcml2ZV9hdXRoKGVtYWlsID0gImtpMTFpcDAucy5hLnNAZ21haWwuY29tIikKZ3M0X2F1dGgodG9rZW4gPSBkcml2ZV90b2tlbigpKQoKZHJpdmVfdXNlcigpCmBgYAoKIyMgUmVhZAoKYGBge3Igc3N9CnNzX2N2X2VuIDwtIGFzX3NoZWV0c19pZCgiaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vc3ByZWFkc2hlZXRzL2QvMU9JZWlfaEdvSkxTX2dqc1lBajJpaG1HRVRhNmd3NlpsbmJBM2dZd1RlaTQvZWRpdCNnaWQ9MCIpCmBgYAoKIyMjIE9wdCAxOiBSZWFkIEluZGl2aWR1YWwgU2hlZXQKCmBgYHtyIHJlYWRfaW5kaXZpZHVhbH0KZWR1IDwtIHJlYWRfc2hlZXQoc3NfY3ZfZW4sIHNoZWV0ID0gIkVkdWNhdGlvbiIpCndvcmsgPC0gcmVhZF9zaGVldChzc19jdl9lbiwgc2hlZXQgPSAiRW1wbG95bWVudCIpCm5sIDwtIHJlYWRfc2hlZXQoc3NfY3ZfZW4sIHNoZWV0ID0gIk5MIikKbmwyIDwtIHJlYWRfc2hlZXQoc3NfY3ZfZW4sIHNoZWV0ID0gIk5MMiIpCnJlc2VhcmNoIDwtIHJlYWRfc2hlZXQoc3NfY3ZfZW4sIHNoZWV0ID0gIlJlc2VhcmNoIikKYWNhZCA8LSByZWFkX3NoZWV0KHNzX2N2X2VuLCBzaGVldCA9ICJBY2FkZW1pYyIpCm90aGVyVHIgPC0gcmVhZF9zaGVldChzc19jdl9lbiwgc2hlZXQgPSAiT3RoZXJfdHJhaW4iKQplbGVjdGl2ZSA8LSByZWFkX3NoZWV0KHNzX2N2X2VuLCBzaGVldCA9ICJFbGVjdGl2ZSIpCiAgCmN2ICA8LSBsaXN0KGVkdSA9IGVkdSwgCiAgICAgICB3b3JrID0gd29yaywgCiAgICAgICBubCA9IG5sLCAKICAgICAgIG5sMiA9IG5sMiwgCiAgICAgICByZXNlYXJjaCA9IHJlc2VhcmNoLAogICAgICAgYWNhZCA9IGFjYWQsCiAgICAgICBvdGhlclRyID0gb3RoZXJUciwKICAgICAgIGVsZWN0aXZlID0gZWxlY3RpdmUKICAgICAgICkgJT4lIAogIHdyaXRlX3JkcyhoZXJlKCJkYXRhL2N2X3Jhdy5SZHMiKSkgJT4lIAogICMgYmFja3VwIGZvciBvdGhlcnMgdG8gc2VlIAogIGxicjo6d3JpdGVfY3VzdG9tX3hsc3goaGVyZSgiZGF0YS9jdl9yYXcueGxzeCIpLCBvdmVyd3JpdGUgPSBUUlVFKQogICAgICAgICAgICAgICAgICAgCmN2ICAKYGBgCgojIyMgT3B0IDI6IFJlYWQgQWxsIEdHIHNoZWV0cwoKYGBge3IgcmVhZF9jdl9nZ3NoZWV0fQpyZWFkX2N2X2dnc2hlZXQgPC0gZnVuY3Rpb24oc3MgPSBzc19jdl9lbikgewogIAogIGVkdSA8LSByZWFkX3NoZWV0KHNzLCBzaGVldCA9ICJFZHVjYXRpb24iKQogIHdvcmsgPC0gcmVhZF9zaGVldChzcywgc2hlZXQgPSAiRW1wbG95bWVudCIpCiAgbmwgPC0gcmVhZF9zaGVldChzcywgc2hlZXQgPSAiTkwiKQogIG5sMiA8LSByZWFkX3NoZWV0KHNzLCBzaGVldCA9ICJOTDIiKQogIHJlc2VhcmNoIDwtIHJlYWRfc2hlZXQoc3MsIHNoZWV0ID0gIlJlc2VhcmNoIikKICBhY2FkIDwtIHJlYWRfc2hlZXQoc3MsIHNoZWV0ID0gIkFjYWRlbWljIikKICBvdGhlclRyIDwtIHJlYWRfc2hlZXQoc3MsIHNoZWV0ID0gIk90aGVyX3RyYWluIikKICBlbGVjdGl2ZSA8LSByZWFkX3NoZWV0KHNzLCBzaGVldCA9ICJFbGVjdGl2ZSIpCiAgCiAgbGlzdChlZHUgPSBlZHUsIAogICAgICAgd29yayA9IHdvcmssIAogICAgICAgbmwgPSBubCwgCiAgICAgICBubDIgPSBubDIsIAogICAgICAgcmVzZWFyY2ggPSByZXNlYXJjaCwKICAgICAgIGFjYWQgPSBhY2FkLAogICAgICAgb3RoZXJUciA9IG90aGVyVHIsCiAgICAgICBlbGVjdGl2ZSA9IGVsZWN0aXZlCiAgICAgICApCn0KYGBgCgpgYGB7ciBjdn0KY3YgPC0gcmVhZF9jdl9nZ3NoZWV0KCkgJT4lCiAgd3JpdGVfcmRzKGhlcmUoImRhdGEvY3ZfcmF3LlJkcyIpKSAlPiUgCiAgIyBiYWNrdXAgZm9yIG90aGVycyB0byBzZWUgCiAgbGJyOjp3cml0ZV9jdXN0b21feGxzeChoZXJlKCJkYXRhL2N2X3Jhdy54bHN4IiksIG92ZXJ3cml0ZSA9IFRSVUUpCgpjdiAKYGBgCgoKIyMgQ29udmVydCBZZWFyICjguJ7guKggLT4g4LiE4LioKQoKYGBge3IgQkVfdG9fQUR9CkJFX3RvX0FEIDwtIGZ1bmN0aW9uKGJlKSBiZSAtIDU0MwpgYGAKCmBgYHtyfQpCRV90b19BRChjKDI1NTksIDI1NTgpKQpgYGAKCg==</div>
 
 
 
