@@ -13,6 +13,7 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
+    dplyr,
     glue,
     googledrive,
     googlesheets4,
@@ -22,5 +23,5 @@ Imports:
     readr,
     tibble,
     vitae
-Remotes:  
+Remotes: 
     Lightbridge-KS

@@ -77,6 +77,7 @@ usethis::use_lifecycle_badge("experimental")
 usethis::use_pipe()
 usethis::use_package("here")
 usethis::use_package("readr")
+usethis::use_package("dplyr")
 usethis::use_package("glue")
 usethis::use_package("tibble")
 ## API Package
