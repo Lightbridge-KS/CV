@@ -1,0 +1,151 @@
+---
+name: Marie
+surname: Curie
+position: "Professor"
+address: "School of Physics & Chemistry,\\tabularnewline École Normale Supérieure"
+phone: +1 22 3333 4444
+www: mariecurie.com
+email: "Marie.Curie@ens.fr"
+twitter: mariecurie
+github: mariecurie
+linkedin: mariecurie
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::hyndman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+here::i_am("CV-Test-Hyndman/CV-Test-Hyndman.Rmd")
+library(here)
+library(readr)
+library(vitae)
+library(tibble)
+
+# source(here("R/table.R"))
+```
+
+
+
+# H1
+
+## H2
+
+### H3
+
+#### H4
+
+-   Bullet level 1
+
+    -   Bullet level 2
+
+        -   Bullet level 3
+
+            -   Bullet level 4
+
+
+# Basic `detailed_entries`
+
+```{r}
+tibble(what = rep("What field", 2),
+       when = rep("Start - End", 2),
+       with = rep("With field", 2),
+       where = rep("Where field", 2),
+       why = c("Why 1", "Why 2")
+       ) %>%    
+  detailed_entries(what = what, 
+                   when = when, 
+                   with = with, 
+                   where = where, 
+                   why = why)
+```
+
+# Basic `brief_entries`
+
+```{r}
+tibble(what = rep("What field", 2),
+       when = rep("Start - End", 2),
+       with = rep("With field", 2),
+       where = rep("Where field", 2),
+       why = c("Why 1", "Why 2")
+       ) %>% 
+  brief_entries(what = what, 
+                when = when, 
+                with = with)
+```
+
+# Tricks
+
+## Link to Webpage
+
+[link](https://www.google.com)
+
+[\textcolor{blue}{link}](https://www.google.com) 
+
+\href{http://www.latex-tutorial.com}{\textcolor{blue}{link}}
+
+
+```{r parse_latex_hyperlink}
+parse_latex_hyperlink <- function(text, url, color = "blue") {
+  
+  glue::glue("\\href{<url>}{\\textcolor{<color>}{<text>}}",
+             .open = "<", .close = ">")
+  
+}
+
+parse_latex_hyperlink("Link", "http://www.latex-tutorial.com")
+```
+
+```{r}
+tibble(
+  link = parse_latex_hyperlink("LinkParse", 
+                               "http://www.latex-tutorial.com", color = "red")
+       ) %>% 
+  detailed_entries(what = link, .protect = F)
+```
+
+
+## New line in tibble
+
+```{r new line}
+tibble(text = "Some text \\\\ Now, new line") %>% 
+  detailed_entries(what = text, .protect = F)
+```
+
+
+# Education
+
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Informal studies", "1889-91", "Flying University", "Warsaw, Poland",
+  "Master of Physics", "1893", "Sorbonne Université", "Paris, France",
+  "Master of Mathematics", "1894", "Sorbonne Université", "Paris, France"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Nobel Prizes
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc,
+  1903, "Physics", "Awarded for her work on radioactivity with Pierre Curie and Henri Becquerel",
+  1911, "Chemistry", "Awarded for the discovery of radium and polonium"
+) %>% 
+  brief_entries(
+    glue::glue("Nobel Prize in {Type}"),
+    Year, 
+    Desc
+  )
+```
+
+# Publications
+
+```{r}
+library(dplyr)
+knitr::write_bib(c("vitae", "tibble"), "packages.bib")
+
+bibliography_entries("packages.bib") %>%
+  arrange(desc(author$family), issued)
+```

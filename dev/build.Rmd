@@ -1,0 +1,104 @@
+---
+title: "Build"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file()) # Set WD to Root
+here::i_am("dev/build.Rmd")
+library(here)
+
+```
+
+
+# 1. Git & Build
+
+```{r use_git}
+usethis::use_git()
+```
+
+## Git Ignore
+
+```{r use_git_ignore}
+usethis::use_git_ignore("private")
+```
+
+
+# 2. DOCs
+
+
+## DESCRIPTION
+
+```{r DESCRIPTION}
+usethis::use_description(
+fields = list(
+  Title = "My Curriculum Vitae",
+  `Authors@R` = 'person("Kittipos", "Sirivongrungson", 
+                        email = "ki11ip0.s.a.s@gmail.com", 
+                        role = c("aut", "cre"))',
+  Description = "This repository build Curriculum Vitae using R-Markdown template from vitae package.",
+  License = "MIT + file LICENSE"
+  )
+)
+```
+
+
+## LICENSE
+
+```{r LICENSE}
+usethis::use_mit_license()
+```
+
+## README
+
+```{r README}
+# usethis::use_readme_rmd()
+# usethis::use_lifecycle_badge("experimental")
+```
+
+
+## Template
+
+```{r}
+# usethis::use_rmarkdown_template(
+#   template_name = "name",
+#   template_description = "description"
+#   )
+```
+
+
+# 3. Dependencies
+
+## Import
+
+```{r Import}
+## Basic Package
+usethis::use_pipe()
+usethis::use_package("here")
+usethis::use_package("readr")
+usethis::use_package("glue")
+usethis::use_package("tibble")
+
+## CV Package
+usethis::use_package("vitae")
+
+```
+
+
+## Import from
+
+```{r Import_from}
+# usethis::use_import_from("rlang", ":=") # Must have if use rlang
+```
+
+## Global variables
+
+
+```{r}
+# Put this in  R/globals.R
+# utils::globalVariables(c("var1"))
+# usethis::use_r("globals.R")
+```
+
+

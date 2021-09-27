@@ -1,0 +1,21 @@
+Package: CV
+Title: My Curriculum Vitae
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Kittipos",
+           family = "Sirivongrungson",
+           role = c("aut", "cre"),
+           email = "ki11ip0.s.a.s@gmail.com")
+Description: This repository build Curriculum Vitae using R-Markdown
+    template from vitae package.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    glue,
+    here,
+    magrittr,
+    readr,
+    tibble,
+    vitae
