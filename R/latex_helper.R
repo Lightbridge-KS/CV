@@ -5,20 +5,20 @@
 # Bold --------------------------------------------------------------------
 
 
-latex_bold <- function(text) {
+latex_bold <- function(text, ...) {
   
   glue::glue("\\textbf{<text>}",
-             .open = "<", .close = ">")
+             .open = "<", .close = ">", ...)
 }
 
 
 # Color -------------------------------------------------------------------
 
 
-latex_color <- function(text, color = "red") {
+latex_color <- function(text, color = "red", ...) {
   
   glue::glue("\\textcolor{<color>}{<text>}",
-             .open = "<", .close = ">")
+             .open = "<", .close = ">", ...)
 }
 
 
