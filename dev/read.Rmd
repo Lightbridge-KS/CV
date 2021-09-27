@@ -27,7 +27,33 @@ drive_user()
 ss_cv_en <- as_sheets_id("https://docs.google.com/spreadsheets/d/1OIei_hGoJLS_gjsYAj2ihmGETa6gw6ZlnbA3gYwTei4/edit#gid=0")
 ```
 
-### Read GG sheet
+### Read Individual Sheet
+
+```{r read_individual}
+edu <- read_sheet(ss_cv_en, sheet = "Education")
+work <- read_sheet(ss_cv_en, sheet = "Employment")
+nl <- read_sheet(ss_cv_en, sheet = "NL")
+nl2 <- read_sheet(ss_cv_en, sheet = "NL2")
+research <- read_sheet(ss_cv_en, sheet = "Research")
+acad <- read_sheet(ss_cv_en, sheet = "Academic")
+otherTr <- read_sheet(ss_cv_en, sheet = "Other_train")
+elective <- read_sheet(ss_cv_en, sheet = "Elective")
+  
+cv  <- list(edu = edu, 
+       work = work, 
+       nl = nl, 
+       nl2 = nl2, 
+       research = research,
+       acad = acad,
+       otherTr = otherTr,
+       elective = elective
+       ) %>% 
+  write_rds(here("data/cv.Rds"))
+
+cv
+```
+
+### Read All GG sheets
 
 ```{r read_cv_ggsheet}
 read_cv_ggsheet <- function(ss = ss_cv_en) {
@@ -39,6 +65,7 @@ read_cv_ggsheet <- function(ss = ss_cv_en) {
   research <- read_sheet(ss, sheet = "Research")
   acad <- read_sheet(ss, sheet = "Academic")
   otherTr <- read_sheet(ss, sheet = "Other_train")
+  elective <- read_sheet(ss, sheet = "Elective")
   
   list(edu = edu, 
        work = work, 
@@ -46,7 +73,8 @@ read_cv_ggsheet <- function(ss = ss_cv_en) {
        nl2 = nl2, 
        research = research,
        acad = acad,
-       otherTr = otherTr
+       otherTr = otherTr,
+       elective = elective
        )
 }
 ```
@@ -57,3 +85,15 @@ cv <- read_cv_ggsheet() %>%
 
 cv 
 ```
+
+
+## Convert Year (พศ -> คศ)
+
+```{r BE_to_AD}
+BE_to_AD <- function(be) be - 543
+```
+
+```{r}
+BE_to_AD(c(2559, 2558))
+```
+
