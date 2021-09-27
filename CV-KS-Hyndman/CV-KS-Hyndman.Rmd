@@ -23,7 +23,7 @@ source(here("R/latex_helper.R"))
 ```
 
 ```{r read_cv, include=FALSE}
-cv <- read_rds(here("data/cv.Rds"))
+cv <- read_rds(here("data/cv_raw.Rds"))
 ```
 
 # Current Positions
