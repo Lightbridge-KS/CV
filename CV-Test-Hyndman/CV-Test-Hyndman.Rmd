@@ -157,6 +157,41 @@ tibble(text = "Some text \\\\ Now, new line") %>%
 ```
 
 
+## Footer
+
+
+```{r}
+hi <- "hey"
+```
+
+
+\rfoot{`r hi`}
+
+
+`latex_foot` not working
+
+```{r latex_foot}
+latex_foot <- function(text, side = c("right", "left", "center")) {
+  
+  side <- match.arg(side)
+  
+  s <- switch (side,
+    "right" = { "r" },
+    "left" = { "l" },
+    "center" = { "c" },
+  )
+  
+  glue::glue("\\<s>foot{<text>}",
+    .open = "<", .close = ">"
+    )
+}
+
+
+tibble(foot = latex_foot("To Foot")) %>% 
+    detailed_entries(with = foot, .protect = F)
+```
+
+
 # Education
 
 
