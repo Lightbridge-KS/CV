@@ -26,7 +26,7 @@ source(here("R/latex_helper.R"))
 cv <- read_rds(here("data/cv.Rds"))
 ```
 
-# Employments
+# Current Positions
 
 ```{r work}
 cv$work %>% 
@@ -41,9 +41,12 @@ cv$work %>%
 
 ```{r edu}
 cv$edu %>% 
+  mutate(Details = latex_color(Details, "gray", .na = "")) %>% 
   detailed_entries(what = Degree,
                    when = glue::glue("{Start_yr} - {End_yr}"),
                    with = Institution,
+                   where = Details,
+                   .protect = FALSE
                    )
 ```
 
@@ -95,10 +98,13 @@ cv$acad[4, ] %>%
 
 ```{r}
 cv$otherTr %>% 
+  mutate(prefix_link = latex_color("--- Certificate: ", color = "gray")) %>% 
   mutate(link = latex_hyperlink("Link", Certificate, color = "purple"),
-         prefix_link = latex_color("--- Certificate: ", color = "gray"),
          full_link = paste0(prefix_link, link)
          ) %>% 
+  mutate(
+    By = latex_hyperlink(By, By_link, color = "black")
+    ) %>% 
   detailed_entries(
     what = Title,
     with = By,
@@ -106,6 +112,17 @@ cv$otherTr %>%
     when = Yr,
     .protect = F
     )
+```
+
+# Elective Activities
+
+```{r}
+cv$elective %>% 
+  detailed_entries(
+    what = Title,
+    with = Where,
+    when = Yr
+  )
 ```
 
 # Research Experience
@@ -121,7 +138,13 @@ cv$research %>%
 
 # Projects --- Web applications
 
-### E-learning systems
+\hfill\break
+
+|        During my internship at the Physiology Department, I have developed various web applications in order to automate tasks and improve workflows that belong to these categories:
+
+\hfill\break
+
+### E-learning systems:
 
 -   [\textcolor{purple}{\textbf{SELECx MCQ Analysis}}](https://si-physio-intern.shinyapps.io/SELECx_mcq_analysis/)
 
@@ -131,7 +154,7 @@ cv$research %>%
 
     -   This web application combines score and checks student's submission from [SELECx](http://selecx.si.mahidol.ac.th).
 
-### Physiology Educations
+### Physiology Educations:
 
 -   [\textcolor{purple}{\textbf{BTPS calculator}}](https://btps-calc.herokuapp.com)
 
@@ -141,12 +164,57 @@ cv$research %>%
 
     -   This web application predicts metabolic rate and oxygen consumption from Harvard's spirometer tracing as used in exercise studies laboratory class.
 
-### Research
+### Research:
 
 -   [\textcolor{purple}{\textbf{Combine HRV and BRS Report file}}](https://sips-ans.shinyapps.io/read_HRV_report)
 
     -   This web application combines LabChart's HRV Report files from `.txt` to single Excel table for further data analysis.
-    
-# Elective Activities
+
+\hfill\break
+
+# Skills
+
+\hfill\break
+
+## R-programming for Data Science:
+
+-   **Exploratory Data Analysis** using [\textcolor{purple}{tidyverse packages}](https://www.tidyverse.org)
+
+-   **Inferential Statistics** using [\textcolor{purple}{rstatix package}](https://rpkgs.datanovia.com/rstatix/)
+
+-   **Supervised Learning** using Linear Regression, Spline and Logistic Regression
+
+-   **Unsupervised Learning** using Principal Component Analysis
+
+-   **Web application** using [\textcolor{purple}{shiny package}](https://shiny.rstudio.com)
+
+-   **Programming Environment** using [\textcolor{purple}{RStudio}](https://www.rstudio.com) and [\textcolor{purple}{R Markdown}](https://rmarkdown.rstudio.com)
+
+
+## Other Technical Skills:
+
+-   Basic Python and Jupyter Notebook
+-   Google App Script
+-   Unix command line
+-   Google Sheets and Microsoft Excel
+
+\vfill
+
+
+```{r footer, include=FALSE}
+### Create a Footer and Place in \rfoot{}
+footer <- paste0(
+  latex_color("Source code of this document can be found in ", "gray"),
+  latex_hyperlink("Github",
+    "https://github.com/Lightbridge-KS/CV",
+    color = "purple"
+  )
+)
+
+footer
+```
+
+\rfoot{`r footer`}
+
 
 
