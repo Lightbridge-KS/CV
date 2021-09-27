@@ -1,0 +1,35 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# My Curriculum Vitae (CV)
+
+<!-- badges: start -->
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
+<!-- badges: end -->
+
+------------------------------------------------------------------------
+
+**CV in PDF file can be found:
+[`here`](https://github.com/Lightbridge-KS/CV/blob/main/CV-KS-Hyndman/CV-KS-Hyndman.pdf)**
+
+------------------------------------------------------------------------
+
+## Material
+
+    This CV document is in `R Markdown` format created by
+[`vitae`](https://pkg.mitchelloharawild.com/vitae/index.html) R package.
+Most of the data in this CV comes from my private Google Sheet.
+
+-   [`googlesheets4::read_sheet()`](https://googlesheets4.tidyverse.org/reference/range_read.html)
+    was used to read data from the Google Sheet in to `R`,
+
+-   Then, I’ve passed that data to
+    [`vitae::detailed_entries()`](https://pkg.mitchelloharawild.com/vitae/reference/cv_entries.html)
+    which automagically create LaTeX code as PDF nicely.
+
+    The benefit of “data-driven” CV is not much because I did not have
+many data to feed into it. However, creation process of this CV is fun
+enough to play with.

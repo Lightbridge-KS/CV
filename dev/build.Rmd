@@ -53,8 +53,8 @@ usethis::use_mit_license()
 ## README
 
 ```{r README}
-# usethis::use_readme_rmd()
-# usethis::use_lifecycle_badge("experimental")
+usethis::use_readme_rmd()
+usethis::use_lifecycle_badge("experimental")
 ```
 
 
@@ -85,6 +85,9 @@ usethis::use_package("googlesheets4")
 
 ## CV Package
 usethis::use_package("vitae")
+
+## Personal Package
+usethis::use_dev_package("lbr", remote = "Lightbridge-KS")
 
 ```
 
