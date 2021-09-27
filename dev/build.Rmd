@@ -22,6 +22,8 @@ usethis::use_git()
 
 ```{r use_git_ignore}
 usethis::use_git_ignore("private")
+
+usethis::use_git_ignore("*.nb.html")
 ```
 
 
