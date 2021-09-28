@@ -146,27 +146,36 @@ cv$research %>%
 
 ### E-learning systems:
 
--   [\textcolor{purple}{\textbf{SELECx MCQ Analysis}}](https://si-physio-intern.shinyapps.io/SELECx_mcq_analysis/)
+```{r app, include=FALSE}
+app_latex <- cv$app %>% 
+  mutate(text = latex_hyperlink(latex_bold(Name), Link, color = "purple")) %>% 
+  dplyr::pull(text)
+
+cv$app
+```
+
+
+-   `r app_latex[1]`
 
     -   This web application performs MCQ item analysis of student's quiz report from [SELECx](http://selecx.si.mahidol.ac.th).
 
--   [\textcolor{purple}{\textbf{SELECx Combine Quiz}}](https://si-physio-intern.shinyapps.io/SELECx_combine_quiz/)
+-   `r app_latex[2]`
 
     -   This web application combines score and checks student's submission from [SELECx](http://selecx.si.mahidol.ac.th).
 
 ### Physiology Educations:
 
--   [\textcolor{purple}{\textbf{BTPS calculator}}](https://btps-calc.herokuapp.com)
+-   `r app_latex[3]`
 
     -   This web application converts lung volumn from [ATPS](https://medical-dictionary.thefreedictionary.com/ambient+temperature+and+pressure%2C+saturated) to [BTPS](https://medical-dictionary.thefreedictionary.com/body+temperature+and+pressure%2c+saturated).
 
--   [\textcolor{purple}{\textbf{Metabolic rate and Oxygen consumption calculator}}](https://metabolic-rate-calc.herokuapp.com)
+-   `r app_latex[4]`
 
     -   This web application predicts metabolic rate and oxygen consumption from Harvard's spirometer tracing as used in exercise studies laboratory class.
 
 ### Research:
 
--   [\textcolor{purple}{\textbf{Combine HRV and BRS Report file}}](https://sips-ans.shinyapps.io/read_HRV_report)
+-   `r app_latex[5]`
 
     -   This web application combines LabChart's HRV Report files from `.txt` to single Excel table for further data analysis.
 
