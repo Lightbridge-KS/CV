@@ -38,6 +38,7 @@ research <- read_sheet(ss_cv_en, sheet = "Research")
 acad <- read_sheet(ss_cv_en, sheet = "Academic")
 otherTr <- read_sheet(ss_cv_en, sheet = "Other_train")
 elective <- read_sheet(ss_cv_en, sheet = "Elective")
+app <- read_sheet(ss_cv_en, sheet = "App")
   
 cv  <- list(edu = edu, 
        work = work, 
@@ -46,7 +47,8 @@ cv  <- list(edu = edu,
        research = research,
        acad = acad,
        otherTr = otherTr,
-       elective = elective
+       elective = elective,
+       app = app
        ) %>% 
   write_rds(here("data/cv_raw.Rds")) %>% 
   # backup for others to see 

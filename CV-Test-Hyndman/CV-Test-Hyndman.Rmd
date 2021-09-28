@@ -26,7 +26,7 @@ library(tibble)
 ```
 
 ```{r read_cv, include=FALSE}
-cv <- read_rds(here("data/cv.Rds"))
+cv <- read_rds(here("data/cv_raw.Rds"))
 ```
 
 # Thai Not work yet
@@ -147,6 +147,16 @@ tibble(
        ) %>% 
   detailed_entries(what = link, .protect = F)
 ```
+
+```{r}
+link_test <- latex_hyperlink(latex_bold("LinkTest"), "http://www.latex-tutorial.com")
+```
+
+`r link_test`
+
+
+### Bold Colored Link
+
 
 
 ## New line in tibble
